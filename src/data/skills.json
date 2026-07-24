@@ -1,0 +1,62 @@
+[
+  {
+    "category": "Programming Languages",
+    "icon": "code-2",
+    "skills": [
+      { "name": "Python", "level": 88 },
+      { "name": "JavaScript", "level": 85 },
+      { "name": "Java", "level": 80 },
+      { "name": "Kotlin", "level": 60 },
+      { "name": "HTML & CSS", "level": 82 }
+    ]
+  },
+  {
+    "category": "Frontend & Mobile",
+    "icon": "layout-panel-left",
+    "skills": [
+      { "name": "React", "level": 85 },
+      { "name": "React Native", "level": 72 },
+      { "name": "Flutter", "level": 68 }
+    ]
+  },
+  {
+    "category": "Backend & APIs",
+    "icon": "server",
+    "skills": [
+      { "name": "REST APIs", "level": 85 },
+      { "name": "Microservices Architecture", "level": 78 },
+      { "name": "Apache Kafka", "level": 72 },
+      { "name": "Kong API Gateway", "level": 70 }
+    ]
+  },
+  {
+    "category": "AI & Machine Learning",
+    "icon": "brain-circuit",
+    "skills": [
+      { "name": "Machine Learning", "level": 78 },
+      { "name": "Speech & NLP AI", "level": 75 },
+      { "name": "AI System Integration", "level": 76 },
+      { "name": "Applied Accessibility AI", "level": 80 }
+    ]
+  },
+  {
+    "category": "Data Analysis",
+    "icon": "bar-chart-3",
+    "skills": [
+      { "name": "Data Cleaning & Wrangling", "level": 80 },
+      { "name": "Data Visualization", "level": 75 },
+      { "name": "Exploratory Data Analysis", "level": 78 },
+      { "name": "Insight Reporting", "level": 74 }
+    ]
+  },
+  {
+    "category": "DevOps & Tools",
+    "icon": "container",
+    "skills": [
+      { "name": "Docker", "level": 75 },
+      { "name": "Kubernetes", "level": 65 },
+      { "name": "Git", "level": 88 },
+      { "name": "Agile / Scrum", "level": 82 }
+    ]
+  }
+]

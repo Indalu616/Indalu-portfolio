@@ -1,0 +1,22 @@
+{
+  "interests": [
+    "AI for Accessibility",
+    "Adaptive Learning Systems",
+    "Speech & Language AI",
+    "Distributed Systems & Microservices"
+  ],
+  "ongoing": [
+    {
+      "title": "AI-Powered Adaptive Learning System",
+      "description": "Building a system that personalizes learning content and pacing to each learner in real time, adapting to individual strengths and gaps rather than a one-size-fits-all curriculum.",
+      "status": "In progress"
+    },
+    {
+      "title": "NAVIS AI — Assistive Navigation for the Visually Impaired",
+      "description": "Continuing to develop NAVIS AI beyond its 1st-place competition win, extending the assistive navigation system to help visually impaired individuals move independently in more real-world environments.",
+      "status": "In progress"
+    }
+  ],
+  "papers": [],
+  "conferences": []
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "edu-1",
+    "institution": "Abu Dhabi University",
+    "logo": "",
+    "degree": "B.S. in Software Engineering",
+    "field": "Senior Standing",
+    "location": "Abu Dhabi, UAE",
+    "startDate": "2023",
+    "endDate": "2027",
+    "duration": "Aug 2023 — Expected May 2027",
+    "gpa": "3.96 / 4.00",
+    "description": "Pursuing a Bachelor of Science in Software Engineering with a top-tier GPA. Serving as a Course Assistant for Calculus, Physics, and Programming, and completed a Distributed Systems course project (UAE Connect) covering microservices, Kafka, and Kong.",
+    "coursework": [
+      "Distributed Systems",
+      "Data Structures & Algorithms",
+      "Software Engineering",
+      "Programming Fundamentals",
+      "Calculus",
+      "Physics"
+    ],
+    "awards": [
+      "Recipient of multiple Certificates of Excellence for outstanding academic performance",
+      "Named to the Dean's List in multiple semesters for maintaining a top-tier GPA"
+    ]
+  }
+]

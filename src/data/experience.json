@@ -1,0 +1,79 @@
+[
+  {
+    "id": "exp-1",
+    "company": "Alef Education",
+    "logo": "",
+    "role": "Software Engineer Intern",
+    "location": "Abu Dhabi, UAE",
+    "type": "Internship",
+    "startDate": "2026-01",
+    "endDate": "2026-03",
+    "current": false,
+    "duration": "Jan 2026 — Mar 2026",
+    "summary": "Contributed to real-world, production-grade features within a large-scale, microservices-based ed-tech platform.",
+    "achievements": [
+      "Contributed to production-grade features within a large-scale, microservices-based ed-tech platform",
+      "Gained hands-on experience with Apache Kafka for event-driven, asynchronous service communication",
+      "Worked with Kong API Gateway to manage service routing, authentication, and traffic control",
+      "Collaborated cross-functionally in an Agile/Scrum team through sprint planning, code reviews, and daily stand-ups"
+    ],
+    "technologies": ["Apache Kafka", "Kong API Gateway", "Docker", "Kubernetes", "Microservices", "Agile/Scrum"]
+  },
+  {
+    "id": "exp-2",
+    "company": "Key2Enable",
+    "logo": "",
+    "role": "Freelance AI Developer",
+    "location": "Remote",
+    "type": "Freelance",
+    "startDate": "2025-07",
+    "endDate": "2026-07",
+    "current": false,
+    "duration": "Jul 2025 — Jul 2026",
+    "summary": "Designed and built ClearSpeech, an AI-powered speech therapy platform helping users with speech impairments practice pronunciation.",
+    "achievements": [
+      "Designed and built ClearSpeech, an AI-powered speech therapy platform for users with speech impairments",
+      "Developed and integrated machine learning models for speech analysis and real-time feedback generation",
+      "Owned the project end-to-end as sole developer — from requirements through deployment and delivery"
+    ],
+    "technologies": ["Python", "Machine Learning", "Speech AI", "React"]
+  },
+  {
+    "id": "exp-3",
+    "company": "Abu Dhabi University",
+    "logo": "",
+    "role": "Course Assistant",
+    "location": "Abu Dhabi, UAE",
+    "type": "Part-time",
+    "startDate": "2024-01",
+    "endDate": "Present",
+    "current": true,
+    "duration": "Jan 2024 — Present",
+    "summary": "Leading exam-revision and problem-solving sessions for Calculus, Physics, and Programming courses.",
+    "achievements": [
+      "Led exam-revision and problem-solving sessions for Calculus, Physics, and Programming courses",
+      "Provided one-on-one and small-group tutoring, helping struggling students strengthen core concepts and improve GPA",
+      "Collaborated with faculty to design supplementary practice materials aligned with course objectives"
+    ],
+    "technologies": ["Teaching", "Mentorship", "Curriculum Design"]
+  },
+  {
+    "id": "exp-4",
+    "company": "Self-Employed",
+    "logo": "",
+    "role": "Freelance Full-Stack Developer, Data Analyst & AI Developer",
+    "location": "Remote",
+    "type": "Freelance",
+    "startDate": "2022",
+    "endDate": "Present",
+    "current": true,
+    "duration": "2022 — Present",
+    "summary": "Delivering full-stack web/mobile apps, data analysis solutions, and AI tools for clients across multiple industries.",
+    "achievements": [
+      "Delivered full-stack web/mobile apps, data analysis solutions, and AI tools for clients across multiple industries",
+      "Built responsive front-ends (React, React Native, Flutter) and scalable back-end services (Java, Python)",
+      "Performed data cleaning, analysis, and visualization to help clients derive actionable business insights"
+    ],
+    "technologies": ["React", "React Native", "Flutter", "Java", "Python"]
+  }
+]

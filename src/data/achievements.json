@@ -1,0 +1,34 @@
+[
+  {
+    "id": "ach-1",
+    "type": "competition",
+    "title": "1st Place — Undergraduate Research & Innovation Competition",
+    "issuer": "Abu Dhabi University",
+    "date": "",
+    "description": "Won 1st place among competing undergraduate research teams for NAVIS AI, an AI-powered assistive navigation system for visually impaired individuals, recognized for technical innovation and real-world impact."
+  },
+  {
+    "id": "ach-2",
+    "type": "award",
+    "title": "Certificates of Excellence",
+    "issuer": "Abu Dhabi University",
+    "date": "2023 — Present",
+    "description": "Recipient of multiple Certificates of Excellence for outstanding academic performance across semesters."
+  },
+  {
+    "id": "ach-3",
+    "type": "award",
+    "title": "Dean's List",
+    "issuer": "Abu Dhabi University",
+    "date": "Multiple Semesters",
+    "description": "Named to the Dean's List in multiple semesters for maintaining a top-tier GPA of 3.96/4.00."
+  },
+  {
+    "id": "ach-4",
+    "type": "volunteering",
+    "title": "Sharjah Volunteer Award",
+    "issuer": "Sharjah",
+    "date": "",
+    "description": "Recognized for sustained community impact through on-campus and off-campus volunteer initiatives."
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "name": "Indalu Taresa",
+  "initials": "IT",
+  "titles": [
+    "Software Engineering Student",
+    "Full-Stack Developer",
+    "AI & Machine Learning Engineer",
+    "Freelance Data Analyst"
+  ],
+  "tagline": "I build accessible, intelligent software — from AI systems for underserved communities to production-grade microservices.",
+  "summary": "Senior Software Engineering student at Abu Dhabi University with 3+ years of freelance experience across full-stack development, data analysis, and AI engineering. I've shipped production features on a microservices-based ed-tech platform at Alef Education, built an AI speech-therapy platform as a solo developer, and won 1st place in a university-wide research and innovation competition for an AI accessibility system. Currently building AI tools that make learning and daily life more accessible.",
+  "location": "Abu Dhabi, UAE",
+  "email": "endalukalbesa511@gmail.com",
+  "phone": "+971 50 922 3870",
+  "availability": {
+    "status": "available",
+    "label": "Open to internships & freelance work",
+    "detail": "Pursuing a B.S. in Software Engineering (expected May 2027) — open to internships, freelance projects, and research collaborations"
+  },
+  "resumeUrl": "/resume/Indalu-Taresa-Resume.pdf",
+  "photoUrl": "portfolio_image.png",
+  "yearsExperience": 3,
+  "stats": [
+    { "label": "Years of Freelance Experience", "value": 3, "suffix": "+" },
+    {
+      "label": "Cumulative GPA",
+      "value": 3.96,
+      "suffix": "/4.00",
+      "decimals": 2
+    },
+    { "label": "Research Competition", "value": 1, "suffix": "st Place Win" },
+    { "label": "Core Focus Areas", "value": 3, "suffix": "" }
+  ],
+  "interestsBlurb": "Beyond coursework and client work, I care about building technology that includes people often left out of digital experiences — that's what drives NAVIS AI and ClearSpeech. I also mentor peers as a course assistant and stay active in community volunteering.",
+  "interests": [
+    "AI for Accessibility",
+    "Adaptive Learning Systems",
+    "Speech & Language AI",
+    "Distributed Systems",
+    "Mentorship & Teaching",
+    "Community Volunteering"
+  ]
+}

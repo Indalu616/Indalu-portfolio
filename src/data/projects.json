@@ -1,0 +1,47 @@
+[
+  {
+    "id": "proj-1",
+    "title": "NAVIS AI",
+    "description": "An AI-powered assistive navigation system helping visually impaired individuals move independently — winner of 1st place in Abu Dhabi University's Undergraduate Research & Innovation Competition.",
+    "image": "/images/projects/navis-ai.jpg",
+    "technologies": ["Python", "Machine Learning", "Computer Vision", "Accessibility"],
+    "github": "",
+    "liveDemo": "",
+    "featured": true,
+    "caseStudy": {
+      "problem": "Visually impaired individuals often lack affordable, independent tools for real-time navigation and obstacle awareness in everyday environments.",
+      "solution": "Designed an AI-powered assistive system that helps users navigate independently, combining real-time sensing with accessible audio feedback.",
+      "impact": "Won 1st place among competing undergraduate research teams for technical innovation and real-world impact; now an ongoing research project."
+    }
+  },
+  {
+    "id": "proj-2",
+    "title": "ClearSpeech",
+    "description": "An AI-powered speech therapy platform that helps users with speech impairments practice pronunciation, built and owned end-to-end as a freelance project for Key2Enable.",
+    "image": "/images/projects/clearspeech.jpg",
+    "technologies": ["Python", "Machine Learning", "Speech Analysis", "React"],
+    "github": "",
+    "liveDemo": "",
+    "featured": true,
+    "caseStudy": {
+      "problem": "People with speech impairments often lack accessible, engaging tools to practice pronunciation outside of costly, infrequent therapy sessions.",
+      "solution": "Developed and integrated machine learning models for speech analysis and real-time feedback, then owned the entire product lifecycle solo — from requirements through deployment.",
+      "impact": "Delivered a working AI speech-therapy platform for Key2Enable, giving users a way to practice pronunciation with real-time, automated feedback."
+    }
+  },
+  {
+    "id": "proj-3",
+    "title": "UAE Connect",
+    "description": "An end-to-end microservices-based system built for a Distributed Systems course, covering service discovery, inter-service communication, and API management.",
+    "image": "/images/projects/uae-connect.jpg",
+    "technologies": ["Apache Kafka", "Kong API Gateway", "Docker", "Kubernetes", "Microservices"],
+    "github": "",
+    "liveDemo": "",
+    "featured": false,
+    "caseStudy": {
+      "problem": "Needed to design a production-style distributed system demonstrating service discovery, async messaging, and centralized API management at a course-project scale.",
+      "solution": "Designed and implemented an end-to-end microservices system, integrating Apache Kafka for asynchronous messaging and Kong API Gateway for centralized routing and authentication.",
+      "impact": "Containerized services with Docker and orchestrated deployment via Kubernetes, producing a scalable, production-style setup and hands-on distributed-systems experience later applied at Alef Education."
+    }
+  }
+]

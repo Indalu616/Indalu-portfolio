@@ -1,0 +1,16 @@
+{
+  "email": "endalukalbesa511@gmail.com",
+  "phone": "+971 50 922 3870",
+  "location": "Abu Dhabi, UAE",
+  "timezone": "GST (UTC+4)",
+  "formEndpoint": "",
+  "availability": {
+    "status": "available",
+    "message": "Currently pursuing my B.S. in Software Engineering — open to internships, freelance projects, and research collaborations."
+  },
+  "map": {
+    "label": "Abu Dhabi, UAE",
+    "lat": 24.4539,
+    "lng": 54.3773
+  }
+}
