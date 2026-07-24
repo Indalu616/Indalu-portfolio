@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Download, ArrowRight, MapPin } from 'lucide-react'
+import { Download, ArrowRight, MapPin, Headphones } from 'lucide-react'
 import profile from '../../data/profile.json'
 import social from '../../data/social.json'
 import Container from '../../components/ui/Container'
 import Button from '../../components/buttons/Button'
 import SocialButton from '../../components/buttons/SocialButton'
 import FloatingShapes from '../../components/animations/FloatingShapes'
+import AudioWave from '../../components/animations/AudioWave'
 import { useTypingEffect } from '../../hooks/useTypingEffect'
 import { scrollToId } from '../../utils/scrollTo'
 import { resolveImage } from '../../utils/resolveAsset'
@@ -113,6 +114,20 @@ export default function Hero() {
               <p className="text-2xl font-semibold text-fg">{profile.yearsExperience}+</p>
               <p className="text-xs text-muted">Years Experience</p>
             </div>
+
+            {/* Headphones + a looping equalizer — a nod to the photo: deep-focus coding with music on. */}
+            <motion.div
+              initial={{ opacity: 0, y: -10, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ delay: 0.6, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="absolute -top-5 -right-5 z-20 flex items-center gap-3 rounded-2xl border border-border bg-surface/90 px-4 py-3 shadow-xl backdrop-blur"
+            >
+              <Headphones className="h-5 w-5 text-accent" aria-hidden="true" />
+              <div>
+                <AudioWave className="text-accent" />
+                <p className="mt-1 text-[11px] font-medium text-muted">Deep Focus Mode</p>
+              </div>
+            </motion.div>
           </motion.div>
         </motion.div>
       </Container>
