@@ -1,0 +1,22 @@
+{
+  "terms": [
+    "Array",
+    "Linked List",
+    "Stack",
+    "Queue",
+    "Binary Tree",
+    "Hash Map",
+    "Heap",
+    "Graph",
+    "Trie",
+    "AVL Tree",
+    "Priority Queue",
+    "Union-Find",
+    "Bloom Filter",
+    "Segment Tree",
+    "Deque",
+    "Recursion",
+    "O(log n)",
+    "DFS · BFS"
+  ]
+}

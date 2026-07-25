@@ -8,6 +8,9 @@ import Button from '../../components/buttons/Button'
 import SocialButton from '../../components/buttons/SocialButton'
 import FloatingShapes from '../../components/animations/FloatingShapes'
 import AudioWave from '../../components/animations/AudioWave'
+import BubblingTerms from '../../components/animations/BubblingTerms'
+import GlowWords from '../../components/animations/GlowWords'
+import dataStructureTerms from '../../data/dataStructureTerms.json'
 import { useTypingEffect } from '../../hooks/useTypingEffect'
 import { scrollToId } from '../../utils/scrollTo'
 import { resolveImage } from '../../utils/resolveAsset'
@@ -22,6 +25,7 @@ export default function Hero() {
   return (
     <section id="hero" aria-label="Introduction" className="relative flex min-h-screen items-center overflow-hidden pt-32 pb-20">
       <FloatingShapes />
+      <GlowWords />
       <div
         className="pointer-events-none absolute inset-0 -z-10 opacity-[0.35]"
         style={{
@@ -128,6 +132,8 @@ export default function Hero() {
                 <p className="mt-1 text-[11px] font-medium text-muted">Deep Focus Mode</p>
               </div>
             </motion.div>
+
+            <BubblingTerms terms={dataStructureTerms.terms} side="right" className="hidden sm:block" />
           </motion.div>
         </motion.div>
       </Container>

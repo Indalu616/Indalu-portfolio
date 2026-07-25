@@ -1,0 +1,29 @@
+{
+  "enabled": true,
+  "storageKey": "portfolio_welcome_seen_v2",
+  "appearDelayMs": 500,
+  "terminal": {
+    "fileName": "HireMe.java",
+    "prompt": "alien@dev-station ~/portfolio"
+  },
+  "codeLines": [
+    "public class HireMe {",
+    "",
+    "    String email = \"endalukalbesa511@gmail.com\";",
+    "    String phone = \"+971509223870\";",
+    "",
+    "    void main() {",
+    "        while (coffee.isNotEmpty()) {",
+    "            code();",
+    "        }",
+    "        fillCoffee();",
+    "",
+    "        System.out.println(\"404 Sleep Not Found\");",
+    "    }",
+    "}"
+  ],
+  "badge": "SYSTEM ONLINE",
+  "statusLabel": "COFFEE: MAX",
+  "footerNote": "// TODO: hire this developer",
+  "cta": { "label": "Say Hello", "action": "scroll:contact" }
+}
