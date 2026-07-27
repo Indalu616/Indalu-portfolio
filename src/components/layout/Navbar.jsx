@@ -29,7 +29,7 @@ export default function Navbar() {
             <a
               href="#hero"
               onClick={(e) => handleNavClick(e, 'hero')}
-              className="text-sm font-semibold tracking-tight text-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
+              className="text-sm font-semibold tracking-tight text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
             >
               {navigation.brand}
             </a>
@@ -42,8 +42,8 @@ export default function Navbar() {
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.id)}
                     className={cn(
-                      'relative rounded-full px-3.5 py-2 text-sm font-medium text-muted transition-colors hover:text-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent',
-                      activeId === link.id && 'text-fg',
+                      'relative rounded-full px-3.5 py-2 text-sm font-medium text-muted transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent',
+                      activeId === link.id && 'text-accent',
                     )}
                   >
                     {activeId === link.id && (
@@ -98,8 +98,8 @@ export default function Navbar() {
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.id)}
                 className={cn(
-                  'rounded-xl px-4 py-3 text-sm font-medium text-muted transition-colors hover:bg-accent/10 hover:text-fg',
-                  activeId === link.id && 'bg-accent/10 text-fg',
+                  'rounded-xl px-4 py-3 text-sm font-medium text-muted transition-colors hover:bg-accent/10 hover:text-accent',
+                  activeId === link.id && 'bg-accent/10 text-accent',
                 )}
               >
                 {link.label}

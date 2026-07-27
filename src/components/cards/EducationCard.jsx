@@ -11,7 +11,7 @@ export default function EducationCard({ education }) {
           <GraduationCap className="h-6 w-6" aria-hidden="true" />
         </div>
         <div>
-          <h3 className="text-lg font-semibold text-fg">{institution}</h3>
+          <h3 className="text-lg font-semibold text-accent">{institution}</h3>
           <p className="mt-0.5 font-medium text-accent">{degree}</p>
           <p className="text-sm text-muted">{field}</p>
           <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm text-muted">

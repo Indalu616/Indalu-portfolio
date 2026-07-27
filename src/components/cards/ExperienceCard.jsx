@@ -15,7 +15,7 @@ export default function ExperienceCard({ experience }) {
       <div className="flex items-start justify-between gap-4">
         <div>
           <div className="flex flex-wrap items-center gap-2">
-            <h3 className="text-lg font-semibold text-fg">{role}</h3>
+            <h3 className="text-lg font-semibold text-accent">{role}</h3>
             {current && <Badge variant="success">Current</Badge>}
           </div>
           <p className="mt-1 font-medium text-accent">{company}</p>

@@ -33,7 +33,7 @@ export default function Projects() {
       <Modal open={!!selected} onClose={() => setSelected(null)} title={selected?.title}>
         {selected && (
           <div>
-            <h3 className="pr-10 text-2xl font-semibold text-fg">{selected.title}</h3>
+            <h3 className="pr-10 text-2xl font-semibold text-accent">{selected.title}</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted">{selected.description}</p>
 
             <div className="mt-5 flex flex-wrap gap-2">

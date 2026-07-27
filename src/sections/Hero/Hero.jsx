@@ -53,7 +53,7 @@ export default function Hero() {
               {profile.availability.label}
             </motion.div>
 
-            <motion.h1 variants={fadeUp} className="text-balance text-4xl font-semibold tracking-tight text-fg sm:text-6xl lg:text-7xl">
+            <motion.h1 variants={fadeUp} className="text-balance text-4xl font-semibold tracking-tight text-accent sm:text-6xl lg:text-7xl">
               Hi, I&apos;m {profile.name.split(' ')[0]}.
               {/*
                 The typed line is stacked in a CSS grid together with an invisible copy of

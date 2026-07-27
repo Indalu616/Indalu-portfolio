@@ -10,7 +10,7 @@ function CertificationCard({ certification }) {
       <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
         <BadgeCheck className="h-5 w-5" aria-hidden="true" />
       </div>
-      <h3 className="mt-4 text-base font-semibold leading-snug text-fg">{title}</h3>
+      <h3 className="mt-4 text-base font-semibold leading-snug text-accent">{title}</h3>
       <p className="mt-1 text-sm text-muted">{issuer}</p>
       <div className="mt-3 space-y-1 text-xs text-muted">
         <p>Issued {formatMonthYear(issueDate)}</p>

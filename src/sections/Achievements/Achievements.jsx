@@ -34,7 +34,7 @@ export default function Achievements() {
                   </div>
                   <Badge variant="outline">{meta.label}</Badge>
                 </div>
-                <h3 className="mt-4 text-base font-semibold leading-snug text-fg">{item.title}</h3>
+                <h3 className="mt-4 text-base font-semibold leading-snug text-accent">{item.title}</h3>
                 <p className="mt-1 text-sm text-muted">
                   {item.issuer}
                   {item.date && <> &middot; {item.date}</>}

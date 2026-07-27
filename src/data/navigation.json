@@ -10,5 +10,6 @@
     { "id": "achievements", "label": "Achievements", "href": "#achievements" },
     { "id": "contact", "label": "Contact", "href": "#contact" }
   ],
-  "cta": { "label": "Resume", "href": "/resume/Indalu-Taresa-Resume.pdf" }
+  "cta": { "label": "Resume", "href": "/resume/Indalu-Taresa-Resume.pdf" },
+  "cursorLabel": "Hire Me"
 }

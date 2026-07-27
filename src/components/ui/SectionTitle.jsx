@@ -18,7 +18,7 @@ export default function SectionTitle({ eyebrow, title, description, align = 'lef
           {eyebrow}
         </span>
       )}
-      <h2 className="text-balance text-3xl font-semibold tracking-tight text-fg sm:text-4xl lg:text-5xl">
+      <h2 className="text-balance text-3xl font-semibold tracking-tight text-accent sm:text-4xl lg:text-5xl">
         {title}
       </h2>
       {description && (

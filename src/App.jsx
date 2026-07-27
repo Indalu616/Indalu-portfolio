@@ -6,7 +6,9 @@ import ScrollProgressBar from './components/common/ScrollProgressBar'
 import SEOHead from './components/common/SEOHead'
 import Loader from './components/common/Loader'
 import Particles from './components/animations/Particles'
-import CursorGlow from './components/animations/CursorGlow'
+import CursorTag from './components/animations/CursorTag'
+import navigation from './data/navigation.json'
+import profile from './data/profile.json'
 import Hero from './sections/Hero/Hero'
 import About from './sections/About/About'
 import Skills from './sections/Skills/Skills'
@@ -28,7 +30,7 @@ function App() {
       <AccentThemeProvider>
         <SEOHead />
         <Particles />
-        <CursorGlow />
+        <CursorTag labels={[navigation.cursorLabel, profile.phone, profile.email]} />
         <ScrollProgressBar />
         <Navbar />
         <main>

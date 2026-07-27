@@ -28,7 +28,7 @@ export default function Skills() {
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent">
                     <Icon className="h-5 w-5" aria-hidden="true" />
                   </div>
-                  <h3 className="text-base font-semibold text-fg">{group.category}</h3>
+                  <h3 className="text-base font-semibold text-accent">{group.category}</h3>
                 </div>
                 <div className="mt-5 space-y-4">
                   {group.skills.map((skill) => (

@@ -7,7 +7,7 @@ function ResearchCard({ paper }) {
   return (
     <Card hover className="p-6">
       <FileText className="h-5 w-5 text-accent" aria-hidden="true" />
-      <h3 className="mt-3 text-base font-semibold leading-snug text-fg">{title}</h3>
+      <h3 className="mt-3 text-base font-semibold leading-snug text-accent">{title}</h3>
       <p className="mt-1.5 text-sm text-muted">{authors}</p>
       <p className="mt-1 text-xs text-muted">
         {venue} &middot; {date}

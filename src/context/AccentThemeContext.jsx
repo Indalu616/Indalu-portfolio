@@ -27,9 +27,10 @@ function applyAccentVars(primary, secondary) {
  *
  * Because the two CSS variables are the single source of truth, most
  * consumers (Tailwind's `accent` / `accent-2` utilities — buttons, borders,
- * icons, glows, gradients) update automatically with no React re-render at
- * all. Components that need the live value in JS (e.g. <canvas> particles)
- * should read it via `useAccentTheme()`.
+ * icons, glows, gradients, navigation, and headings via `text-accent`)
+ * update automatically with no React re-render at all. Components that
+ * need the live value in JS (e.g. <canvas> particles) should read it via
+ * `useAccentTheme()`.
  */
 export function AccentThemeProvider({ children }) {
   const [reducedMotion, setReducedMotion] = useState(
