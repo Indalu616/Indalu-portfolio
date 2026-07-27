@@ -1,9 +1,12 @@
 import { lazy, Suspense } from 'react'
 import { ThemeProvider } from './context/ThemeContext'
+import { AccentThemeProvider } from './context/AccentThemeContext'
 import Navbar from './components/layout/Navbar'
 import ScrollProgressBar from './components/common/ScrollProgressBar'
 import SEOHead from './components/common/SEOHead'
 import Loader from './components/common/Loader'
+import Particles from './components/animations/Particles'
+import CursorGlow from './components/animations/CursorGlow'
 import Hero from './sections/Hero/Hero'
 import About from './sections/About/About'
 import Skills from './sections/Skills/Skills'
@@ -22,37 +25,41 @@ const Contact = lazy(() => import('./sections/Contact/Contact'))
 function App() {
   return (
     <ThemeProvider>
-      <SEOHead />
-      <ScrollProgressBar />
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Suspense fallback={<Loader />}>
-          <Education />
-        </Suspense>
-        <Suspense fallback={<Loader />}>
-          <Certifications />
-        </Suspense>
-        <Suspense fallback={<Loader />}>
-          <Projects />
-        </Suspense>
-        <Suspense fallback={<Loader />}>
-          <Research />
-        </Suspense>
-        <Suspense fallback={<Loader />}>
-          <Achievements />
-        </Suspense>
-        <Suspense fallback={<Loader />}>
-          <Testimonials />
-        </Suspense>
-        <Suspense fallback={<Loader />}>
-          <Contact />
-        </Suspense>
-      </main>
-      <Footer />
+      <AccentThemeProvider>
+        <SEOHead />
+        <Particles />
+        <CursorGlow />
+        <ScrollProgressBar />
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Skills />
+          <Experience />
+          <Suspense fallback={<Loader />}>
+            <Education />
+          </Suspense>
+          <Suspense fallback={<Loader />}>
+            <Certifications />
+          </Suspense>
+          <Suspense fallback={<Loader />}>
+            <Projects />
+          </Suspense>
+          <Suspense fallback={<Loader />}>
+            <Research />
+          </Suspense>
+          <Suspense fallback={<Loader />}>
+            <Achievements />
+          </Suspense>
+          <Suspense fallback={<Loader />}>
+            <Testimonials />
+          </Suspense>
+          <Suspense fallback={<Loader />}>
+            <Contact />
+          </Suspense>
+        </main>
+        <Footer />
+      </AccentThemeProvider>
     </ThemeProvider>
   )
 }
