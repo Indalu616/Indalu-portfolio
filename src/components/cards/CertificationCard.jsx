@@ -18,7 +18,7 @@ function CertificationCard({ certification, index, total, onOpen, inert = false,
       type="button"
       onClick={() => onOpen?.(certification)}
       tabIndex={inert ? -1 : undefined}
-      aria-label={inert ? undefined : `View certificate: ${title} — ${issuer}`}
+      aria-label={inert ? undefined : `View certificate: ${title}, ${issuer}`}
       className={cn(
         'hud-corners group relative flex w-[300px] shrink-0 flex-col border border-white/[0.08] bg-gradient-to-b from-white/[0.04] to-white/[0.01] text-left transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/50 hover:shadow-[0_24px_70px_-30px_var(--color-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent sm:w-[360px]',
         className,

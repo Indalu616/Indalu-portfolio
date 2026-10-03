@@ -13,7 +13,7 @@ export default function Experience() {
         eyebrow="Experience"
         title="Where I've made"
         highlight="an impact"
-        description="Internships, freelance engagements, and teaching roles — shipping real software and helping others learn to build it."
+        description="Internships, freelance engagements, and teaching roles, shipping real software and helping others learn to build it."
       />
 
       <div className="mt-14">

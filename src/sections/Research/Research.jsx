@@ -35,7 +35,7 @@ export default function Research() {
 
       {research.papers.length > 0 && (
         <>
-          <h3 className="hud-label mt-16 text-accent">{'// Publications'}</h3>
+          <h3 className="hud-label mt-16 text-accent">Publications</h3>
           <StaggerGroup className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3" stagger={0.08}>
             {research.papers.map((paper) => (
               <motion.div key={paper.title} variants={fadeUp}>
@@ -48,14 +48,14 @@ export default function Research() {
 
       {research.conferences.length > 0 && (
         <>
-          <h3 className="hud-label mt-16 text-accent">{'// Conferences'}</h3>
+          <h3 className="hud-label mt-16 text-accent">Conferences</h3>
           <div className="mt-6 hud-corners divide-y divide-white/[0.07] border border-white/[0.07]">
             {research.conferences.map((conf) => (
               <div key={`${conf.name}-${conf.date}`} className="flex flex-col gap-1 bg-white/[0.015] p-5 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex items-center gap-2">
                   <Mic className="h-4 w-4 text-accent" />
                   <span className="font-medium text-fg">{conf.name}</span>
-                  <span className="text-sm text-muted">— {conf.role}</span>
+                  <span className="text-sm text-muted">· {conf.role}</span>
                 </div>
                 <span className="text-sm text-muted">{conf.location} &middot; {conf.date}</span>
               </div>

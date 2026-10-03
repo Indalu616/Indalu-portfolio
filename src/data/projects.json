@@ -2,9 +2,14 @@
   {
     "id": "proj-1",
     "title": "NAVIS AI",
-    "description": "An AI-powered assistive navigation system helping visually impaired individuals move independently — winner of 1st place in Abu Dhabi University's Undergraduate Research & Innovation Competition.",
+    "description": "An AI-powered assistive navigation system helping visually impaired individuals move independently. Winner of 1st place in Abu Dhabi University's Undergraduate Research & Innovation Competition.",
     "image": "/images/projects/navis-ai.jpg",
-    "technologies": ["Python", "Machine Learning", "Computer Vision", "Accessibility"],
+    "technologies": [
+      "Python",
+      "Machine Learning",
+      "Computer Vision",
+      "Accessibility"
+    ],
     "github": "",
     "liveDemo": "",
     "featured": true,
@@ -15,17 +20,62 @@
     }
   },
   {
+    "id": "proj-kinetiq",
+    "title": "Kinetiq",
+    "description": "An AI-powered rehabilitation platform with early-sign stroke screening. It turns any webcam into a movement lab, tracking body, hand and facial landmarks entirely on-device.",
+    "image": "kinetiq.webp",
+    "technologies": [
+      "Computer Vision",
+      "MediaPipe",
+      "Pose Estimation",
+      "Healthcare AI"
+    ],
+    "github": "",
+    "liveDemo": "https://kinetiq-tau-eight.vercel.app/",
+    "featured": true,
+    "caseStudy": {
+      "problem": "Rehabilitation progress is hard to measure outside the clinic, and early stroke signs such as facial droop or one-sided weakness are easy to miss without a specialist present.",
+      "solution": "Built a browser-based platform that uses MediaPipe body, hand and face landmark models to run standardized, camera-based movement assessments and compare left against right. It also screens for early stroke signs. Everything runs on-device, with no uploads, accounts or servers.",
+      "impact": "Gives patients and clinicians a private, accessible way to track movement and flag possible stroke signs using nothing more than a webcam."
+    }
+  },
+  {
+    "id": "proj-skillai",
+    "title": "SkillAI",
+    "description": "An AI-driven adaptive learning platform that reads your resume, maps it against the role you want, and builds a personalized learning path around your specific skill gaps.",
+    "image": "SkillAi.webp",
+    "technologies": [
+      "Machine Learning",
+      "Random Forest",
+      "Resume Analysis",
+      "Adaptive Learning"
+    ],
+    "github": "",
+    "liveDemo": "https://skill-ai-frontend-qgym.vercel.app/",
+    "featured": true,
+    "caseStudy": {
+      "problem": "Learners often know they need to upskill but not what to learn. Generic courses ignore the gap between their current skills and the role they are targeting.",
+      "solution": "Built a platform that analyzes a user's resume, extracts their skills, matches them against a target job role, and generates a personalized learning path. A Random Forest model adapts quiz and content difficulty to each learner's performance, with an AI assistant and progress tracking along the way.",
+      "impact": "Turns study time into targeted progress toward a specific role. The system is the basis of a conference-accepted research paper on AI-driven adaptive learning."
+    }
+  },
+  {
     "id": "proj-2",
     "title": "ClearSpeech",
     "description": "An AI-powered speech therapy platform that helps users with speech impairments practice pronunciation, built and owned end-to-end as a freelance project for Key2Enable.",
-    "image": "/images/projects/clearspeech.jpg",
-    "technologies": ["Python", "Machine Learning", "Speech Analysis", "React"],
+    "image": "clearspeech.webp",
+    "technologies": [
+      "Python",
+      "Machine Learning",
+      "Speech Analysis",
+      "React"
+    ],
     "github": "",
-    "liveDemo": "",
+    "liveDemo": "https://pronuncaition-therapy.vercel.app/",
     "featured": true,
     "caseStudy": {
       "problem": "People with speech impairments often lack accessible, engaging tools to practice pronunciation outside of costly, infrequent therapy sessions.",
-      "solution": "Developed and integrated machine learning models for speech analysis and real-time feedback, then owned the entire product lifecycle solo — from requirements through deployment.",
+      "solution": "Developed and integrated machine learning models for speech analysis and real-time feedback, then owned the entire product lifecycle solo, from requirements through deployment.",
       "impact": "Delivered a working AI speech-therapy platform for Key2Enable, giving users a way to practice pronunciation with real-time, automated feedback."
     }
   },
@@ -34,7 +84,13 @@
     "title": "UAE Connect",
     "description": "An end-to-end microservices-based system built for a Distributed Systems course, covering service discovery, inter-service communication, and API management.",
     "image": "/images/projects/uae-connect.jpg",
-    "technologies": ["Apache Kafka", "Kong API Gateway", "Docker", "Kubernetes", "Microservices"],
+    "technologies": [
+      "Apache Kafka",
+      "Kong API Gateway",
+      "Docker",
+      "Kubernetes",
+      "Microservices"
+    ],
     "github": "",
     "liveDemo": "",
     "featured": false,

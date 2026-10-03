@@ -65,7 +65,7 @@ export default function Hero() {
                 variants={fadeUp}
                 className="font-display text-[2.6rem] font-bold uppercase leading-[0.98] tracking-wide text-fg sm:text-6xl lg:text-[4.6rem] xl:text-[5.2rem]"
               >
-                <span className="sr-only">{profile.name} — </span>
+                <span className="sr-only">{profile.name}: </span>
                 Engineering
                 <br />
                 Beyond the

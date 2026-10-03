@@ -18,7 +18,7 @@ export default function Skills() {
         eyebrow="Skills"
         title="A full-stack,"
         highlight="AI-native toolkit"
-        description="Grouped by domain — from low-level systems to the frontier of applied machine learning."
+        description="Grouped by domain, from low-level systems to the frontier of applied machine learning."
       />
 
       <StaggerGroup className="relative mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3" stagger={0.08}>

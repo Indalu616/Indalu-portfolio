@@ -9,7 +9,7 @@
     "startDate": "2026-01",
     "endDate": "2026-03",
     "current": false,
-    "duration": "Jan 2026 — Mar 2026",
+    "duration": "Jan 2026 – Mar 2026",
     "summary": "Contributed to real-world, production-grade features within a large-scale, microservices-based ed-tech platform.",
     "achievements": [
       "Contributed to production-grade features within a large-scale, microservices-based ed-tech platform",
@@ -29,12 +29,12 @@
     "startDate": "2025-07",
     "endDate": "2026-07",
     "current": false,
-    "duration": "Jul 2025 — Jul 2026",
+    "duration": "Jul 2025 – Jul 2026",
     "summary": "Designed and built ClearSpeech, an AI-powered speech therapy platform helping users with speech impairments practice pronunciation.",
     "achievements": [
       "Designed and built ClearSpeech, an AI-powered speech therapy platform for users with speech impairments",
       "Developed and integrated machine learning models for speech analysis and real-time feedback generation",
-      "Owned the project end-to-end as sole developer — from requirements through deployment and delivery"
+      "Owned the project end-to-end as sole developer, from requirements through deployment and delivery"
     ],
     "technologies": ["Python", "Machine Learning", "Speech AI", "React"]
   },
@@ -48,7 +48,7 @@
     "startDate": "2024-01",
     "endDate": "Present",
     "current": true,
-    "duration": "Jan 2024 — Present",
+    "duration": "Jan 2024 – Present",
     "summary": "Leading exam-revision and problem-solving sessions for Calculus, Physics, and Programming courses.",
     "achievements": [
       "Led exam-revision and problem-solving sessions for Calculus, Physics, and Programming courses",
@@ -67,7 +67,7 @@
     "startDate": "2022",
     "endDate": "Present",
     "current": true,
-    "duration": "2022 — Present",
+    "duration": "2022 – Present",
     "summary": "Delivering full-stack web/mobile apps, data analysis solutions, and AI tools for clients across multiple industries.",
     "achievements": [
       "Delivered full-stack web/mobile apps, data analysis solutions, and AI tools for clients across multiple industries",

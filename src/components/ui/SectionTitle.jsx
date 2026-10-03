@@ -17,7 +17,7 @@ export default function SectionTitle({ eyebrow, index, title, highlight, descrip
     >
       {eyebrow && (
         <span className={cn('hud-label mb-5 flex items-center gap-3 text-accent', align === 'center' && 'justify-center')}>
-          <span className="text-white/40">{index ? `// ${index}` : '//'}</span>
+          {index && <span className="text-white/40">{index}</span>}
           {eyebrow}
           <span className="h-px w-12 bg-gradient-to-r from-accent to-transparent" aria-hidden="true" />
         </span>

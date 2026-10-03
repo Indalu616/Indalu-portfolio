@@ -53,7 +53,7 @@ export default function Navbar() {
             href="#hero"
             onClick={(e) => handleNavClick(e, 'hero')}
             className="flex items-center gap-2.5 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-            aria-label={`${navigation.brand} — back to top`}
+            aria-label={`${navigation.brand}, back to top`}
           >
             <BrandMark />
             <span className="font-display text-sm font-semibold tracking-[0.32em] text-fg">{navigation.brandShort}</span>

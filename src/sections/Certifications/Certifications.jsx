@@ -69,7 +69,7 @@ export default function Certifications() {
             ))}
           </div>
         ) : (
-          <div className="pause-on-hover fade-x overflow-hidden py-4" role="region" aria-label="Certificates carousel — hover to pause, click a certificate to view it">
+          <div className="pause-on-hover fade-x overflow-hidden py-4" role="region" aria-label="Certificates carousel. Hover to pause, click a certificate to view it">
             <div
               className="flex w-max animate-marquee gap-6 pr-6"
               style={{ '--marquee-duration': `${total * SECONDS_PER_CARD}s` }}

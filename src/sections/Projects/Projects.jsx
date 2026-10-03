@@ -21,12 +21,12 @@ export default function Projects() {
         eyebrow="Projects"
         title="Selected"
         highlight="work"
-        description="AI for accessibility, speech technology, and distributed systems — projects built to solve real problems for real people."
+        description="AI for accessibility, speech technology, and distributed systems. Projects built to solve real problems for real people."
       />
 
-      <StaggerGroup className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" stagger={0.08}>
+      <StaggerGroup className="mt-12 flex flex-wrap justify-center gap-4" stagger={0.08}>
         {projects.map((project, i) => (
-          <motion.div key={project.id} variants={fadeUp}>
+          <motion.div key={project.id} variants={fadeUp} className="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc((100%-2rem)/3)] xl:w-[calc((100%-4rem)/5)]">
             <ProjectCard project={project} index={i} onCaseStudy={setSelected} />
           </motion.div>
         ))}

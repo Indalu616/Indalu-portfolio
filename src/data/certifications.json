@@ -1,7 +1,7 @@
 [
   {
     "id": "cert-uric",
-    "title": "1st Place — Innovation Category",
+    "title": "1st Place, Innovation Category",
     "subtitle": "13th Undergraduate Research & Innovation Competition (URIC)",
     "issuer": "Abu Dhabi University",
     "type": "Award",
@@ -9,6 +9,16 @@
     "image": "uric_certificate.webp",
     "description": "Certificate of Achievement for winning 1st place in the Innovation category with NAVIS AI, an AI-powered assistive navigation system for visually impaired users.",
     "featured": true
+  },
+  {
+    "id": "cert-sharjah",
+    "title": "Sharjah Award for Voluntary Work",
+    "subtitle": "Certificate of Appreciation: University Student Category 2025",
+    "issuer": "Sharjah Award for Voluntary Work",
+    "type": "Award",
+    "date": "Sep 2026",
+    "image": "sharjah.webp",
+    "description": "Recognized by the Sharjah Award for Voluntary Work for active participation in voluntary work in the University Student category (2025)."
   },
   {
     "id": "cert-alef",
@@ -28,7 +38,7 @@
     "type": "Completion",
     "date": "2026",
     "image": "Ai-developer.webp",
-    "description": "Completed a freelance development project building an AI-powered pronunciation therapy application for people with speech and communication disabilities — AI integration, speech analysis, and app development."
+    "description": "Completed a freelance development project building an AI-powered pronunciation therapy application for people with speech and communication disabilities, covering AI integration, speech analysis, and app development."
   },
   {
     "id": "cert-datacamp",
@@ -43,7 +53,7 @@
   {
     "id": "cert-course-assistant",
     "title": "Course Assistant",
-    "subtitle": "Certificate of Appreciation — Academic Success Center Tutoring Program",
+    "subtitle": "Certificate of Appreciation: Academic Success Center Tutoring Program",
     "issuer": "Abu Dhabi University",
     "type": "Appreciation",
     "date": "Spring 2024–25",
@@ -63,7 +73,7 @@
   {
     "id": "cert-peer-mentor",
     "title": "Peer Mentor",
-    "subtitle": "Certificate of Appreciation — Peer Mentoring Program",
+    "subtitle": "Certificate of Appreciation: Peer Mentoring Program",
     "issuer": "Abu Dhabi University",
     "type": "Appreciation",
     "date": "Spring 2023–24",
