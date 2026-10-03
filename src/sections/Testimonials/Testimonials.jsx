@@ -55,7 +55,7 @@ export default function Testimonials() {
             type="button"
             onClick={() => go(-1)}
             aria-label="Previous testimonial"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted transition-colors hover:border-accent/50 hover:text-accent"
+            className="inline-flex h-10 w-10 items-center justify-center chamfer-sm border border-white/15 text-muted transition-colors hover:border-accent hover:text-accent"
           >
             <ChevronLeft className="h-4 w-4" />
           </button>
@@ -70,7 +70,7 @@ export default function Testimonials() {
                   setDirection(i > index ? 1 : -1)
                   setIndex(i)
                 }}
-                className={cn('h-1.5 rounded-full transition-all duration-300', i === index ? 'w-6 bg-accent' : 'w-1.5 bg-border')}
+                className={cn('h-1 transition-all duration-300', i === index ? 'w-6 bg-accent' : 'w-3 bg-white/20')}
               />
             ))}
           </div>
@@ -79,7 +79,7 @@ export default function Testimonials() {
             type="button"
             onClick={() => go(1)}
             aria-label="Next testimonial"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted transition-colors hover:border-accent/50 hover:text-accent"
+            className="inline-flex h-10 w-10 items-center justify-center chamfer-sm border border-white/15 text-muted transition-colors hover:border-accent hover:text-accent"
           >
             <ChevronRight className="h-4 w-4" />
           </button>

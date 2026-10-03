@@ -102,7 +102,7 @@ export default function Particles({ className = '' }) {
     <canvas
       ref={canvasRef}
       aria-hidden="true"
-      className={`pointer-events-none fixed inset-0 z-0 h-full w-full opacity-60 ${className}`}
+      className={`pointer-events-none fixed inset-0 z-0 h-full w-full opacity-40 ${className}`}
     />
   )
 }

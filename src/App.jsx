@@ -42,10 +42,10 @@ function App() {
             <Education />
           </Suspense>
           <Suspense fallback={<Loader />}>
-            <Certifications />
+            <Projects />
           </Suspense>
           <Suspense fallback={<Loader />}>
-            <Projects />
+            <Certifications />
           </Suspense>
           <Suspense fallback={<Loader />}>
             <Research />

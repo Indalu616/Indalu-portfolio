@@ -1,17 +1,17 @@
 import { cn } from '../../utils/cn'
 
 const VARIANTS = {
-  default: 'bg-surface text-fg border-border',
-  accent: 'bg-accent/10 text-accent border-accent/20',
-  success: 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20',
-  outline: 'bg-transparent text-muted border-border',
+  default: 'bg-white/5 text-fg border-white/10',
+  accent: 'bg-accent/10 text-accent border-accent/40',
+  success: 'bg-success/10 text-success border-success/30',
+  outline: 'bg-transparent text-muted border-white/15',
 }
 
 export default function Badge({ children, variant = 'default', className, icon: Icon }) {
   return (
     <span
       className={cn(
-        'inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium',
+        'chamfer-sm inline-flex items-center gap-1.5 border px-2.5 py-1 font-mono text-[10px] font-medium uppercase tracking-[0.16em]',
         VARIANTS[variant],
         className,
       )}

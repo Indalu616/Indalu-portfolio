@@ -18,8 +18,8 @@ const TYPE_META = {
 
 export default function Achievements() {
   return (
-    <SectionWrapper id="achievements" ariaLabel="Achievements" className="bg-surface/30">
-      <SectionTitle eyebrow="Achievements" title="Milestones along the way" description="Awards, competitions, and the community work I care about outside of day-to-day engineering." />
+    <SectionWrapper id="achievements" ariaLabel="Achievements">
+      <SectionTitle index="08" eyebrow="Achievements" title="Milestones" highlight="along the way" description="Awards, competitions, and the community work I care about outside of day-to-day engineering." />
 
       <StaggerGroup className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3" stagger={0.07}>
         {achievements.map((item) => {
@@ -29,12 +29,12 @@ export default function Achievements() {
             <motion.div key={item.id} variants={fadeUp}>
               <Card hover className="h-full p-6">
                 <div className="flex items-center justify-between">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                  <div className="chamfer-sm flex h-10 w-10 items-center justify-center border border-accent/40 bg-accent/10 text-accent">
                     <Icon className="h-5 w-5" aria-hidden="true" />
                   </div>
                   <Badge variant="outline">{meta.label}</Badge>
                 </div>
-                <h3 className="mt-4 text-base font-semibold leading-snug text-accent">{item.title}</h3>
+                <h3 className="mt-5 font-display text-base font-semibold uppercase leading-snug tracking-wide text-fg">{item.title}</h3>
                 <p className="mt-1 text-sm text-muted">
                   {item.issuer}
                   {item.date && <> &middot; {item.date}</>}

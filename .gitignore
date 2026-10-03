@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Unredacted originals (contain personal data) — never commit or bundle
+private/

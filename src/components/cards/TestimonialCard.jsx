@@ -8,9 +8,9 @@ function TestimonialCard({ testimonial }) {
     <Card className="mx-auto flex h-full max-w-2xl flex-col p-8 sm:p-10">
       <Quote className="h-8 w-8 text-accent/40" aria-hidden="true" />
       <p className="mt-4 flex-1 text-balance text-lg leading-relaxed text-fg sm:text-xl">&ldquo;{quote}&rdquo;</p>
-      <div className="mt-6 flex items-center justify-between border-t border-border pt-6">
+      <div className="mt-6 flex items-center justify-between border-t border-white/[0.07] pt-6">
         <div className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-accent/10 text-sm font-semibold text-accent">
+          <div className="flex h-11 w-11 items-center justify-center chamfer-sm bg-accent/10 font-display text-sm font-semibold text-accent">
             {name.split(' ').map((n) => n[0]).join('')}
           </div>
           <div>

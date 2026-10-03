@@ -7,8 +7,8 @@ import EducationCard from '../../components/cards/EducationCard'
 
 export default function Education() {
   return (
-    <SectionWrapper id="education" ariaLabel="Education" className="bg-surface/30">
-      <SectionTitle eyebrow="Education" title="Academic foundation" description="Formal training that underpins the engineering and research work." />
+    <SectionWrapper id="education" ariaLabel="Education">
+      <SectionTitle index="04" eyebrow="Education" title="Academic" highlight="foundation" description="Formal training that underpins the engineering and research work." />
 
       <div className="mt-14">
         <Timeline>

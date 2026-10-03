@@ -9,9 +9,11 @@ export default function Experience() {
   return (
     <SectionWrapper id="experience" ariaLabel="Work experience">
       <SectionTitle
+        index="03"
         eyebrow="Experience"
-        title="Where I've made an impact"
-        description="Six years of shipping production systems, from early-stage startups to AI infrastructure teams."
+        title="Where I've made"
+        highlight="an impact"
+        description="Internships, freelance engagements, and teaching roles — shipping real software and helping others learn to build it."
       />
 
       <div className="mt-14">

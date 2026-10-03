@@ -39,7 +39,7 @@ export default function Modal({ open, onClose, title, children, className }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="absolute inset-0 bg-bg/80 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/85 backdrop-blur-sm"
           />
           <motion.div
             initial={{ opacity: 0, y: 24, scale: 0.97 }}
@@ -47,7 +47,7 @@ export default function Modal({ open, onClose, title, children, className }) {
             exit={{ opacity: 0, y: 16, scale: 0.98 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className={cn(
-              'relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-border bg-surface p-7 shadow-2xl sm:p-9',
+              'hud-corners relative max-h-[85vh] w-full max-w-2xl overflow-y-auto border border-white/10 bg-surface p-7 shadow-[0_30px_120px_-40px_var(--color-accent)] sm:p-9',
               className,
             )}
           >
@@ -56,7 +56,7 @@ export default function Modal({ open, onClose, title, children, className }) {
               type="button"
               onClick={onClose}
               aria-label="Close dialog"
-              className="absolute right-5 top-5 inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              className="absolute right-5 top-5 inline-flex h-9 w-9 items-center justify-center chamfer-sm border border-white/15 text-muted transition-colors hover:border-accent hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
             >
               <X className="h-4 w-4" />
             </button>

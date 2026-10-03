@@ -1,141 +1,151 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Download, ArrowRight, MapPin, Headphones } from 'lucide-react'
+import { ArrowRight, Download, ChevronDown, MapPin } from 'lucide-react'
 import profile from '../../data/profile.json'
 import social from '../../data/social.json'
 import Container from '../../components/ui/Container'
 import Button from '../../components/buttons/Button'
 import SocialButton from '../../components/buttons/SocialButton'
-import FloatingShapes from '../../components/animations/FloatingShapes'
-import AudioWave from '../../components/animations/AudioWave'
-import BubblingTerms from '../../components/animations/BubblingTerms'
-import GlowWords from '../../components/animations/GlowWords'
-import dataStructureTerms from '../../data/dataStructureTerms.json'
+import HalftonePortrait from '../../components/animations/HalftonePortrait'
 import { useTypingEffect } from '../../hooks/useTypingEffect'
 import { scrollToId } from '../../utils/scrollTo'
 import { resolveImage } from '../../utils/resolveAsset'
-import { staggerContainer, fadeUp, scaleIn } from '../../lib/motionVariants'
+import { staggerContainer, fadeUp, fadeIn } from '../../lib/motionVariants'
+
+const HUD_READOUTS = [
+  { k: 'GPA', v: '3.96 / 4.00' },
+  { k: 'LOC', v: 'ABU DHABI · UAE' },
+  { k: 'FOCUS', v: 'AI · ACCESSIBILITY' },
+]
 
 export default function Hero() {
   const typed = useTypingEffect(profile.titles)
-  const [imageFailed, setImageFailed] = useState(false)
-  const photoSrc = resolveImage(profile.photoUrl)
-  const showPhoto = Boolean(photoSrc) && !imageFailed
+  const portrait = resolveImage(profile.heroPortrait ?? profile.photoUrl)
 
   return (
-    <section id="hero" aria-label="Introduction" className="relative flex min-h-screen items-center overflow-hidden pt-32 pb-20">
-      <FloatingShapes />
-      <GlowWords />
-      <div
-        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.35]"
-        style={{
-          backgroundImage:
-            'linear-gradient(to right, var(--color-border) 1px, transparent 1px), linear-gradient(to bottom, var(--color-border) 1px, transparent 1px)',
-          backgroundSize: '56px 56px',
-          maskImage: 'radial-gradient(ellipse 70% 60% at 50% 30%, black 40%, transparent 100%)',
-        }}
-        aria-hidden="true"
-      />
+    <section id="hero" aria-label="Introduction" className="relative overflow-hidden pt-24 pb-16 sm:pt-28 lg:pb-24">
+      {/* Floor glow beneath the frame */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[55%] accent-haze opacity-70" aria-hidden="true" />
 
       <Container>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={staggerContainer(0.12)}
-          className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10"
-        >
-          <div>
-            <motion.div variants={fadeUp} className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-surface/70 px-4 py-1.5 text-xs font-medium text-muted backdrop-blur">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-              </span>
-              {profile.availability.label}
-            </motion.div>
-
-            <motion.h1 variants={fadeUp} className="text-balance text-4xl font-semibold tracking-tight text-accent sm:text-6xl lg:text-7xl">
-              Hi, I&apos;m {profile.name.split(' ')[0]}.
-              {/*
-                The typed line is stacked in a CSS grid together with an invisible copy of
-                every title. Grid auto-sizing reserves space for the tallest/widest one up
-                front, so the animated text typing/deleting never changes this box's size —
-                nothing below or beside it (buttons, social icons, the photo) has to reflow.
-              */}
-              <span className="mt-2 grid">
-                {profile.titles.map((title) => (
-                  <span key={title} aria-hidden="true" className="invisible col-start-1 row-start-1">
-                    {title}
-                  </span>
-                ))}
-                <span className="col-start-1 row-start-1 bg-gradient-to-r from-accent via-accent to-accent-2 bg-clip-text text-transparent">
-                  {typed}
-                  <span className="animate-pulse text-accent">|</span>
-                </span>
-              </span>
-            </motion.h1>
-
-            <motion.p variants={fadeUp} className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-muted">
-              {profile.tagline} {profile.summary.split('. ')[0]}.
-            </motion.p>
-
-            <motion.div variants={fadeUp} className="mt-5 flex items-center gap-2 text-sm text-muted">
-              <MapPin className="h-4 w-4 text-accent" /> {profile.location}
-            </motion.div>
-
-            <motion.div variants={fadeUp} className="mt-9 flex flex-wrap items-center gap-4">
-              <Button href={profile.resumeUrl} download="Indalu-Taresa-Resume.pdf" icon={Download} magnetic>
-                Download Resume
-              </Button>
-              <Button variant="outline" icon={ArrowRight} onClick={() => scrollToId('contact')}>
-                Get in Touch
-              </Button>
-            </motion.div>
-
-            <motion.div variants={fadeUp} className="mt-10 flex items-center gap-3">
-              {social.map((s) => (
-                <SocialButton key={s.name} {...s} />
-              ))}
-            </motion.div>
+        <div className="hud-frame relative min-h-[calc(100svh-9rem)] px-6 py-12 sm:px-10 lg:px-16 lg:py-0">
+          {/* interior grid + glow */}
+          <div className="pointer-events-none absolute inset-[1px] -z-0 overflow-hidden" aria-hidden="true">
+            <div className="hud-grid absolute inset-0 opacity-60 [mask-image:radial-gradient(ellipse_80%_70%_at_60%_40%,black,transparent)]" />
+            <div className="absolute -bottom-1/3 right-0 h-2/3 w-2/3 rounded-full bg-accent/20 blur-[120px]" />
           </div>
 
-          <motion.div variants={scaleIn} className="relative mx-auto w-full max-w-sm lg:max-w-none">
-            <div className="relative z-0 aspect-square overflow-hidden rounded-[2rem] border border-border bg-gradient-to-br from-accent/25 via-surface to-accent-2/20 shadow-2xl">
-              {showPhoto ? (
-                <img
-                  src={photoSrc}
-                  alt={profile.name}
-                  loading="eager"
-                  className="absolute inset-0 z-10 h-full w-full object-cover"
-                  onError={() => setImageFailed(true)}
-                />
-              ) : (
-                <div className="absolute inset-0 z-0 flex items-center justify-center text-8xl font-semibold text-accent/25" aria-hidden="true">
-                  {profile.initials}
-                </div>
-              )}
-            </div>
-            <div className="absolute -bottom-5 -left-5 z-20 rounded-2xl border border-border bg-surface/90 px-5 py-3 shadow-xl backdrop-blur">
-              <p className="text-2xl font-semibold text-fg">{profile.yearsExperience}+</p>
-              <p className="text-xs text-muted">Years Experience</p>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer(0.12, 0.1)}
+            className="relative grid h-full min-h-[inherit] grid-cols-1 items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]"
+          >
+            {/* ── Copy ── */}
+            <div className="relative z-10 lg:py-24">
+              <motion.div
+                variants={fadeUp}
+                className="chamfer-sm mb-7 inline-flex items-center gap-2 border border-accent/50 bg-accent/5 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-accent"
+              >
+                <span className="text-white/40">&gt;</span>
+                {/* Reserve width for the longest title so the chip never jumps */}
+                <span className="grid">
+                  {profile.titles.map((t) => (
+                    <span key={t} aria-hidden="true" className="invisible col-start-1 row-start-1">
+                      {t}_
+                    </span>
+                  ))}
+                  <span className="col-start-1 row-start-1">
+                    {typed}
+                    <span className="animate-blink">_</span>
+                  </span>
+                </span>
+              </motion.div>
+
+              <motion.h1
+                variants={fadeUp}
+                className="font-display text-[2.6rem] font-bold uppercase leading-[0.98] tracking-wide text-fg sm:text-6xl lg:text-[4.6rem] xl:text-[5.2rem]"
+              >
+                <span className="sr-only">{profile.name} — </span>
+                Engineering
+                <br />
+                Beyond the
+                <br />
+                <span className="text-accent text-glow">Code</span>
+              </motion.h1>
+
+              <motion.p variants={fadeUp} className="mt-7 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+                I&apos;m <span className="text-fg">{profile.name}</span>. {profile.tagline}
+              </motion.p>
+
+              <motion.div variants={fadeUp} className="mt-9 flex flex-wrap items-center gap-3">
+                <Button icon={ArrowRight} magnetic onClick={() => scrollToId('projects')}>
+                  View Projects
+                </Button>
+                <Button variant="outline" href={profile.resumeUrl} download="Indalu-Taresa-Resume.pdf" icon={Download}>
+                  Download CV
+                </Button>
+              </motion.div>
+
+              <motion.div variants={fadeUp} className="mt-9 flex items-center gap-3">
+                {social.map((s) => (
+                  <SocialButton key={s.name} {...s} />
+                ))}
+                <span className="ml-2 hidden items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest text-muted sm:inline-flex">
+                  <MapPin className="h-3.5 w-3.5 text-accent" /> {profile.location}
+                </span>
+              </motion.div>
             </div>
 
-            {/* Headphones + a looping equalizer — a nod to the photo: deep-focus coding with music on. */}
-            <motion.div
-              initial={{ opacity: 0, y: -10, scale: 0.9 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ delay: 0.6, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute -top-5 -right-5 z-20 flex items-center gap-3 rounded-2xl border border-border bg-surface/90 px-4 py-3 shadow-xl backdrop-blur"
-            >
-              <Headphones className="h-5 w-5 text-accent" aria-hidden="true" />
-              <div>
-                <AudioWave className="text-accent" />
-                <p className="mt-1 text-[11px] font-medium text-muted">Deep Focus Mode</p>
+            {/* ── Portrait ── */}
+            <motion.div variants={fadeIn} className="relative h-[440px] sm:h-[560px] lg:h-auto lg:self-stretch">
+              <HalftonePortrait
+                src={portrait}
+                alt={`Portrait of ${profile.name}`}
+                className="!absolute inset-x-0 bottom-0 top-0 overflow-hidden lg:top-16"
+                fallback={
+                  <div className="flex h-full items-center justify-center font-display text-8xl font-bold text-accent/30">{profile.initials}</div>
+                }
+              />
+
+              {/* HUD readouts */}
+              <div className="pointer-events-none absolute bottom-10 left-0 hidden flex-col items-start gap-2 sm:flex lg:bottom-28">
+                {HUD_READOUTS.map((r, i) => (
+                  <motion.div
+                    key={r.k}
+                    initial={{ opacity: 0, x: -16 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 1 + i * 0.15, duration: 0.5 }}
+                    className="chamfer-sm flex items-center gap-3 border border-white/10 bg-black/60 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.2em] backdrop-blur"
+                  >
+                    <span className="text-accent">{r.k}</span>
+                    <span className="text-fg/80">{r.v}</span>
+                  </motion.div>
+                ))}
               </div>
-            </motion.div>
 
-            <BubblingTerms terms={dataStructureTerms.terms} side="right" className="hidden sm:block" />
+            </motion.div>
           </motion.div>
-        </motion.div>
+
+          {/* ── Status bar ── */}
+          <div className="relative z-10 mt-4 flex items-center gap-4 pb-8 lg:absolute lg:inset-x-16 lg:bottom-6 lg:mt-0 lg:pb-0">
+            <span className="flex shrink-0 items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] sm:text-[11px]">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-success" />
+              </span>
+              <span className="text-success">Status:</span>
+              <span className="text-fg/80">Available for hire</span>
+            </span>
+            <span className="h-px flex-1 bg-gradient-to-r from-white/25 via-white/10 to-accent/40" aria-hidden="true" />
+            <button
+              type="button"
+              onClick={() => scrollToId('about')}
+              className="hidden shrink-0 items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-accent/80 transition-colors hover:text-accent sm:inline-flex"
+            >
+              Scroll to explore <ChevronDown className="h-4 w-4 animate-bounce" />
+            </button>
+          </div>
+        </div>
       </Container>
     </section>
   )

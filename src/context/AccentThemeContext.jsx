@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { AccentContext } from './accent-context'
-import { ACCENT_COLORS, ACCENT_CYCLE_INTERVAL_MS, ACCENT_TRANSITION_DURATION_MS } from '../constants/accentColors'
+import { ACCENT_COLORS, ACCENT_SECONDARY, ACCENT_CYCLE_INTERVAL_MS, ACCENT_TRANSITION_DURATION_MS } from '../constants/accentColors'
 import { lerpColor, easeInOutCubic } from '../utils/color'
 
 const PULSE_CLASS = 'accent-pulse'
@@ -8,6 +8,7 @@ const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)'
 
 const wrapIndex = (i) => ((i % ACCENT_COLORS.length) + ACCENT_COLORS.length) % ACCENT_COLORS.length
 const nextOf = (i) => wrapIndex(i + 1)
+const secondaryOf = (i) => (ACCENT_COLORS.length > 1 ? ACCENT_COLORS[nextOf(i)] : ACCENT_SECONDARY)
 
 function applyAccentVars(primary, secondary) {
   const root = document.documentElement
@@ -55,15 +56,15 @@ export function AccentThemeProvider({ children }) {
   // Paint the starting colors synchronously, before the browser's first
   // paint, so there's no flash-of-default-then-jump-to-accent on load.
   useLayoutEffect(() => {
-    applyAccentVars(ACCENT_COLORS[0], ACCENT_COLORS[nextOf(0)])
+    applyAccentVars(ACCENT_COLORS[0], secondaryOf(0))
   }, [])
 
   const animateTo = (toIndex) => {
     const computed = getComputedStyle(document.documentElement)
     const fromPrimary = computed.getPropertyValue('--color-accent').trim() || ACCENT_COLORS[0]
-    const fromSecondary = computed.getPropertyValue('--color-accent-2').trim() || ACCENT_COLORS[nextOf(0)]
+    const fromSecondary = computed.getPropertyValue('--color-accent-2').trim() || secondaryOf(0)
     const toPrimary = ACCENT_COLORS[toIndex]
-    const toSecondary = ACCENT_COLORS[nextOf(toIndex)]
+    const toSecondary = secondaryOf(toIndex)
 
     if (rafRef.current) cancelAnimationFrame(rafRef.current)
     clearTimeout(pulseTimeoutRef.current)
@@ -111,7 +112,7 @@ export function AccentThemeProvider({ children }) {
   // Auto-cycle every ACCENT_CYCLE_INTERVAL_MS. Disabled entirely under
   // prefers-reduced-motion — the accent stays fixed on the starting color.
   useEffect(() => {
-    if (reducedMotion) return undefined
+    if (reducedMotion || ACCENT_COLORS.length < 2) return undefined
     const id = setInterval(() => {
       goToIndex(indexRef.current + 1)
     }, ACCENT_CYCLE_INTERVAL_MS)

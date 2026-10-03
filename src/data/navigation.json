@@ -1,15 +1,17 @@
 {
   "brand": "Indalu Taresa",
+  "brandShort": "INDALU",
   "links": [
     { "id": "hero", "label": "Home", "href": "#hero" },
     { "id": "about", "label": "About", "href": "#about" },
     { "id": "skills", "label": "Skills", "href": "#skills" },
     { "id": "experience", "label": "Experience", "href": "#experience" },
     { "id": "projects", "label": "Projects", "href": "#projects" },
+    { "id": "certificates", "label": "Certificates", "href": "#certificates" },
     { "id": "research", "label": "Research", "href": "#research" },
-    { "id": "achievements", "label": "Achievements", "href": "#achievements" },
     { "id": "contact", "label": "Contact", "href": "#contact" }
   ],
-  "cta": { "label": "Resume", "href": "/resume/Indalu-Taresa-Resume.pdf" },
+  "cta": { "label": "Let's Talk", "href": "#contact" },
+  "resume": { "label": "Resume", "href": "/resume/Indalu-Taresa-Resume.pdf" },
   "cursorLabel": "Hire Me"
 }

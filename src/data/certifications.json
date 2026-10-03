@@ -1,1 +1,73 @@
-[]
+[
+  {
+    "id": "cert-uric",
+    "title": "1st Place — Innovation Category",
+    "subtitle": "13th Undergraduate Research & Innovation Competition (URIC)",
+    "issuer": "Abu Dhabi University",
+    "type": "Award",
+    "date": "2026",
+    "image": "uric_certificate.webp",
+    "description": "Certificate of Achievement for winning 1st place in the Innovation category with NAVIS AI, an AI-powered assistive navigation system for visually impaired users.",
+    "featured": true
+  },
+  {
+    "id": "cert-alef",
+    "title": "Software Engineering Intern",
+    "subtitle": "Experience Certificate",
+    "issuer": "Alef Education",
+    "type": "Experience",
+    "date": "Feb 2026",
+    "image": "internship_redacted.webp",
+    "description": "Confirms my internship in the Software Engineering division at Alef Education, working on a large-scale, microservices-based ed-tech platform."
+  },
+  {
+    "id": "cert-key2enable",
+    "title": "Freelance AI Developer",
+    "subtitle": "Certificate of Completion",
+    "issuer": "Key2Enable Assistive Technology",
+    "type": "Completion",
+    "date": "2026",
+    "image": "Ai-developer.webp",
+    "description": "Completed a freelance development project building an AI-powered pronunciation therapy application for people with speech and communication disabilities — AI integration, speech analysis, and app development."
+  },
+  {
+    "id": "cert-datacamp",
+    "title": "Data Manipulation with pandas",
+    "subtitle": "Statement of Accomplishment · 4 hours",
+    "issuer": "DataCamp",
+    "type": "Course",
+    "date": "Apr 2025",
+    "image": "data_camp.webp",
+    "description": "Completed DataCamp's Data Manipulation with pandas course (statement #40,028,849)."
+  },
+  {
+    "id": "cert-course-assistant",
+    "title": "Course Assistant",
+    "subtitle": "Certificate of Appreciation — Academic Success Center Tutoring Program",
+    "issuer": "Abu Dhabi University",
+    "type": "Appreciation",
+    "date": "Spring 2024–25",
+    "image": "course-assistant.webp",
+    "description": "Recognized for invaluable contribution to the Academic Success Center's tutoring program as a Course Assistant."
+  },
+  {
+    "id": "cert-excellence",
+    "title": "Certificate of Excellence",
+    "subtitle": "Outstanding performance in Engineering",
+    "issuer": "Abu Dhabi University",
+    "type": "Academic",
+    "date": "Spring 2023/24",
+    "image": "excellence-certificate.webp",
+    "description": "Granted for outstanding academic performance in the College of Engineering."
+  },
+  {
+    "id": "cert-peer-mentor",
+    "title": "Peer Mentor",
+    "subtitle": "Certificate of Appreciation — Peer Mentoring Program",
+    "issuer": "Abu Dhabi University",
+    "type": "Appreciation",
+    "date": "Spring 2023–24",
+    "image": "peer-mentor.webp",
+    "description": "Recognized for invaluable contribution to the Academic Success Center's Peer Mentoring Program, supporting incoming freshmen."
+  }
+]

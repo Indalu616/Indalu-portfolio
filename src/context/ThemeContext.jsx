@@ -4,11 +4,8 @@ import { ThemeContext } from './theme-context'
 const STORAGE_KEY = 'portfolio-theme'
 
 function getInitialTheme() {
-  if (typeof window === 'undefined') return 'dark'
-  const stored = window.localStorage.getItem(STORAGE_KEY)
-  if (stored === 'light' || stored === 'dark') return stored
-  const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches
-  return prefersLight ? 'light' : 'dark'
+  // The HUD redesign is dark-only; the provider is kept so existing consumers keep working.
+  return 'dark'
 }
 
 export function ThemeProvider({ children }) {
@@ -18,7 +15,11 @@ export function ThemeProvider({ children }) {
     const root = document.documentElement
     root.classList.toggle('dark', theme === 'dark')
     root.style.colorScheme = theme
-    window.localStorage.setItem(STORAGE_KEY, theme)
+    try {
+      window.localStorage.setItem(STORAGE_KEY, theme)
+    } catch {
+      /* storage unavailable — theme is fixed anyway */
+    }
   }, [theme])
 
   const value = useMemo(

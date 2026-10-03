@@ -92,7 +92,7 @@ export default function CursorTag({ labels = [] }) {
     <div
       ref={elRef}
       aria-hidden="true"
-      className={`accent-glow pointer-events-none fixed left-0 top-0 z-[70] whitespace-nowrap rounded-full border border-accent/40 bg-bg/90 px-4 py-1.5 text-xs font-semibold text-accent shadow-lg backdrop-blur transition-[opacity,transform] duration-300 ease-out ${
+      className={`accent-glow pointer-events-none fixed left-0 top-0 z-[70] whitespace-nowrap chamfer-sm border border-accent/50 bg-bg/90 px-3 py-1.5 font-mono text-[11px] uppercase tracking-widest text-accent shadow-lg backdrop-blur transition-[opacity,transform] duration-300 ease-out ${
         visible ? 'scale-100 opacity-100' : 'scale-75 opacity-0'
       }`}
     >

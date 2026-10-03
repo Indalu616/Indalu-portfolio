@@ -2,27 +2,37 @@ import { motion } from 'framer-motion'
 import { fadeUp, viewportOnce } from '../../lib/motionVariants'
 import { cn } from '../../utils/cn'
 
-/** Consistent eyebrow + heading + description pattern used at the top of every section. */
-export default function SectionTitle({ eyebrow, title, description, align = 'left', className }) {
+/**
+ * HUD section header: mono index label, uppercase display heading with an
+ * optional accent-colored `highlight` word, and a short description.
+ */
+export default function SectionTitle({ eyebrow, index, title, highlight, description, align = 'left', className }) {
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
       viewport={viewportOnce}
       variants={fadeUp}
-      className={cn('max-w-2xl', align === 'center' && 'mx-auto text-center', className)}
+      className={cn('max-w-3xl', align === 'center' && 'mx-auto text-center', className)}
     >
       {eyebrow && (
-        <span className="mb-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-          <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+        <span className={cn('hud-label mb-5 flex items-center gap-3 text-accent', align === 'center' && 'justify-center')}>
+          <span className="text-white/40">{index ? `// ${index}` : '//'}</span>
           {eyebrow}
+          <span className="h-px w-12 bg-gradient-to-r from-accent to-transparent" aria-hidden="true" />
         </span>
       )}
-      <h2 className="text-balance text-3xl font-semibold tracking-tight text-accent sm:text-4xl lg:text-5xl">
+      <h2 className="text-balance text-3xl font-bold uppercase leading-[1.05] tracking-wide text-fg sm:text-4xl lg:text-5xl">
         {title}
+        {highlight && (
+          <>
+            {' '}
+            <span className="text-accent text-glow">{highlight}</span>
+          </>
+        )}
       </h2>
       {description && (
-        <p className="mt-4 text-balance text-base leading-relaxed text-muted sm:text-lg">{description}</p>
+        <p className="mt-5 text-balance text-base leading-relaxed text-muted sm:text-lg">{description}</p>
       )}
     </motion.div>
   )

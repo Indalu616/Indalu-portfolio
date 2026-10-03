@@ -1,15 +1,12 @@
 /**
- * Curated accent palette the dynamic theme cycles through. Order defines the
- * cycling sequence; edit this list to change which colors are in rotation.
+ * Accent palette. The HUD redesign uses a single fixed signal-orange accent, so
+ * the list has one entry and the auto-cycle in AccentThemeProvider is skipped.
+ * Add more colors here to re-enable cycling.
  */
-export const ACCENT_COLORS = [
-  '#8B5CF6', // Claude Purple
-  '#3B82F6', // Vercel Blue
-  '#06B6D4', // Copilot Cyan
-  '#10B981', // Emerald
-  '#6366F1', // Stripe Indigo
-  '#22D3EE', // Neon Aqua
-]
+export const ACCENT_COLORS = ['#FF8A00']
+
+/** Secondary accent used for gradients/highlights alongside the primary. */
+export const ACCENT_SECONDARY = '#FFB547'
 
 /** How long each accent color stays active before transitioning to the next. */
 export const ACCENT_CYCLE_INTERVAL_MS = 5000

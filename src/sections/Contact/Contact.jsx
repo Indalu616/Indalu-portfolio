@@ -56,10 +56,13 @@ export default function Contact() {
   };
 
   return (
-    <SectionWrapper id="contact" ariaLabel="Contact" className="bg-surface/30">
+    <SectionWrapper id="contact" ariaLabel="Contact">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 accent-haze opacity-50" aria-hidden="true" />
       <SectionTitle
+        index="09"
         eyebrow="Contact"
-        title="Let's build something great"
+        title="Let's build"
+        highlight="something great"
         description={contact.availability.message}
       />
 
@@ -73,34 +76,34 @@ export default function Contact() {
           <div className="space-y-4">
             <a
               href={`mailto:${contact.email}`}
-              className="flex items-center gap-4 rounded-2xl border border-border bg-surface/60 p-5 transition-colors hover:border-accent/40"
+              className="hud-corners group flex items-center gap-4 border border-white/[0.08] bg-white/[0.02] p-5 transition-colors hover:border-accent/40"
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
+              <span className="chamfer-sm flex h-11 w-11 items-center justify-center border border-accent/40 bg-accent/10 text-accent">
                 <Mail className="h-5 w-5" />
               </span>
               <div>
-                <p className="text-xs text-muted">Email</p>
+                <p className="hud-label text-white/40">Email</p>
                 <p className="font-medium text-fg">{contact.email}</p>
               </div>
             </a>
             <a
               href={`tel:${contact.phone.replace(/[^+\d]/g, "")}`}
-              className="flex items-center gap-4 rounded-2xl border border-border bg-surface/60 p-5 transition-colors hover:border-accent/40"
+              className="hud-corners group flex items-center gap-4 border border-white/[0.08] bg-white/[0.02] p-5 transition-colors hover:border-accent/40"
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
+              <span className="chamfer-sm flex h-11 w-11 items-center justify-center border border-accent/40 bg-accent/10 text-accent">
                 <Phone className="h-5 w-5" />
               </span>
               <div>
-                <p className="text-xs text-muted">Phone</p>
+                <p className="hud-label text-white/40">Phone</p>
                 <p className="font-medium text-fg">{contact.phone}</p>
               </div>
             </a>
-            <div className="flex items-center gap-4 rounded-2xl border border-border bg-surface/60 p-5">
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
+            <div className="hud-corners flex items-center gap-4 border border-white/[0.08] bg-white/[0.02] p-5">
+              <span className="chamfer-sm flex h-11 w-11 items-center justify-center border border-accent/40 bg-accent/10 text-accent">
                 <MapPin className="h-5 w-5" />
               </span>
               <div>
-                <p className="text-xs text-muted">Location</p>
+                <p className="hud-label text-white/40">Location</p>
                 <p className="font-medium text-fg">
                   {contact.location} &middot; {contact.timezone}
                 </p>
@@ -114,12 +117,12 @@ export default function Contact() {
             ))}
           </div>
 
-          <div className="relative mt-6 flex h-48 items-center justify-center overflow-hidden rounded-2xl border border-border bg-surface/40">
+          <div className="hud-corners relative mt-6 flex h-48 items-center justify-center overflow-hidden border border-white/[0.08] bg-white/[0.015]">
             <div
               className="absolute inset-0 opacity-40"
               style={{
                 backgroundImage:
-                  "linear-gradient(to right, var(--color-border) 1px, transparent 1px), linear-gradient(to bottom, var(--color-border) 1px, transparent 1px)",
+                  "linear-gradient(to right, rgba(255,138,0,0.12) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,138,0,0.12) 1px, transparent 1px)",
                 backgroundSize: "28px 28px",
               }}
               aria-hidden="true"
@@ -141,7 +144,7 @@ export default function Contact() {
           <form
             onSubmit={onSubmit}
             noValidate
-            className="space-y-5 rounded-2xl border border-border bg-surface/60 p-6 sm:p-8"
+            className="hud-corners relative space-y-5 border border-white/[0.08] bg-black/60 p-6 backdrop-blur sm:p-8"
           >
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
               <Field
@@ -188,7 +191,7 @@ export default function Contact() {
             </Button>
 
             {status === "success" && (
-              <p className="flex items-center gap-2 text-sm text-emerald-500">
+              <p className="flex items-center gap-2 text-sm text-success">
                 <CheckCircle2 className="h-4 w-4" /> Message sent — I'll get
                 back to you soon.
               </p>
@@ -220,7 +223,7 @@ function Field({
   const Tag = as;
   return (
     <label className="block">
-      <span className="mb-1.5 flex items-center gap-1.5 text-sm font-medium text-fg">
+      <span className="hud-label mb-2 flex items-center gap-1.5 text-fg/70">
         {label} {!optional && <span className="text-accent">*</span>}
       </span>
       <Tag
@@ -231,7 +234,7 @@ function Field({
         onChange={onChange}
         aria-invalid={!!error}
         aria-describedby={error ? `${name}-error` : undefined}
-        className="w-full rounded-xl border border-border bg-bg/50 px-4 py-2.5 text-sm text-fg placeholder:text-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+        className="w-full border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-fg placeholder:text-muted transition-colors focus:border-accent focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent"
       />
       {error && (
         <span
